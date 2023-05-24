@@ -51,9 +51,12 @@ button {
     font-weight: 500;
     font-size: 40px;
     line-height: 53px;
-    margin-bottom: 40px;
     text-align: center;
     text-transform: uppercase;
+    color: var(--basic-red);
+
+    margin: 0;
+    margin-bottom: 40px;
 }
 
 /* HEADER */
@@ -185,3 +188,53 @@ button {
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
 
+/* STEPS */
+
+.steps {
+    padding: 80px 131px;
+}
+
+.steps-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-bottom: 17px;
+}
+
+.step-item {
+    width: 317px;
+
+    display: flex;
+    flex-direction: column;
+            /* justify-content: center; */
+    align-items: center;
+}
+
+.step-item:first-of-type {
+    margin-left: -35px;
+    margin-right: 35px;
+}
+
+.step-link {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--basic-red);
+    border-radius: 16px;
+}
+
+.step-text {
+    font-family: 'Aleo';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--basic-green);
+
+    margin: 0;
+}
