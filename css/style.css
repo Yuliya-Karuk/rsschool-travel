@@ -1,6 +1,9 @@
 :root {
     --basic-white: #FFFFFF;
-}
+    --basic-red: #F2785C;
+    --basic-green: #0D606F;
+    --basic-opacity: 0.7;
+ }
 
 *,
 *::before,
@@ -32,7 +35,7 @@ body {
 button {
     border: none;
     border-radius: 10px;
-    padding: 10px 33px;
+    padding: 10px 34px;
 
     font-family: 'Red Hat Text';
     color: var(--basic-white);
@@ -40,13 +43,24 @@ button {
     font-size: 24px;
     line-height: 32px;
 
-    background: #0D606F;
+    background: var(--basic-green);
+}
+
+.section-title {
+    font-family: 'Red Hat Text';
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 /* HEADER */
 
 .header {
-    background-color: rgba(242, 120, 92, 0.7);
+    background-color: var(--basic-red);
+    opacity: var(--basic-opacity);
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
     padding: 25px 120px;
 
@@ -110,16 +124,11 @@ button {
 
 /* MAIN */
 
-.content {
-    position: relative;
-}
-
 /* SECTION PREVIEW */
 
 .preview {
-    position: absolute;
-    top: -90px;
-    padding: 122px 428px 221px 120px;
+    margin-top: -90px;
+    padding: 122px 428px 255px 120px;
 
     background-image: url(../images/bg_1.jpg);
     background-repeat: no-repeat;
@@ -169,7 +178,7 @@ button {
     font-size: 24px;
     line-height: 29px;
     
-    color: #F2785C;
+    color: var(--basic-red);
 }
 
 .preview-button {
