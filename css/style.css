@@ -42,8 +42,24 @@ button {
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
+    text-transform: capitalize;
 
     background: var(--basic-green);
+}
+
+.btn-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.button-arrow {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.button-text {
+    vertical-align: middle;
+    text-transform: capitalize;
 }
 
 .section-title {
@@ -304,19 +320,75 @@ button {
 }
 
 .button-find {
-    display: block;
-    margin: 0 auto 80px;
-
-    padding: 13px 31px;
-
+    margin-bottom: 80px;
+    padding: 14px 31px;
 }
 
-.button-find img {
-    vertical-align: middle;
-    margin-right: 8px;
+/* STORIES */
+
+.stories-background {
+    height: 100%;
+    background-image: url(../images/bg_2.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
-.button-find span {
-    vertical-align: middle;
+.stories-list {
+    list-style: none;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    color: var(--basic-green);
+
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.stories-wrapper {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 40px 120px;
+}
+
+.story-item {
+    display: flex;
+    gap: 40px;
+
+    margin-bottom: 30px;
+}
+
+.story-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.story-item img {
+    filter: drop-shadow(0px 4px 4px #0D606F);
+    border-radius: 16px;
+}
+
+.story-title {
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: inherit;
+
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.story-text,
+.story-link {
+    font-size: 20px;
+    line-height: 24px;
+
+    margin: 0;
+}
+
+.story-link {
+    color: inherit;
+    font-weight: 700;
     text-transform: capitalize;
+}
+
+.button-see {
+    padding: 11px 36px;
 }
