@@ -331,6 +331,8 @@ button {
     background-image: url(../images/bg_2.jpg);
     background-repeat: no-repeat;
     background-position: 0 0;
+
+    padding-bottom: 70px;
 }
 
 .stories-list {
@@ -347,7 +349,7 @@ button {
 
 .stories-wrapper {
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 40px 120px;
+    padding: 40px 120px 43px 120px;
 }
 
 .story-item {
@@ -392,3 +394,48 @@ button {
 .button-see {
     padding: 11px 36px;
 }
+
+/* FOOTER */
+
+.footer {
+    margin-top: -70px;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 14px 120px;
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+}
+
+.text-copyright {
+    margin: 0;
+    margin-left: 30px;
+    text-align: center;
+
+    font-family: 'Red Hat Text';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--basic-white);
+}
+
+.social-list {
+    list-style: none;
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.social-item {
+    margin-right: 20px;
+}
+
+.social-item:last-of-type {
+    margin-right: 0;
+}
+
