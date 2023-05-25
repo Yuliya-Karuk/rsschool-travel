@@ -1,6 +1,7 @@
 :root {
     --basic-white: #FFFFFF;
     --basic-red: #F2785C;
+    --basic-lighter-red: rgba(242, 120, 92, 0.7);
     --basic-green: #0D606F;
     --basic-opacity: 0.7;
  }
@@ -32,10 +33,10 @@ body {
     padding: 0;
 }
 
-button {
+.btn {
     border: none;
     border-radius: 10px;
-    padding: 10px 34px;
+    padding: 10px 33px;
 
     font-family: 'Red Hat Text';
     color: var(--basic-white);
@@ -47,9 +48,21 @@ button {
     background: var(--basic-green);
 }
 
+.btn:hover,
+.btn:focus {
+    background: var(--basic-green);
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: inset 0px 2px 2px #05262c;
+}
+
 .btn-center {
     display: block;
     margin: 0 auto;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
 
 .button-arrow {
@@ -78,8 +91,7 @@ button {
 /* HEADER */
 
 .header {
-    background-color: var(--basic-red);
-    opacity: var(--basic-opacity);
+    background-color: rgba(242, 120, 92, 0.7);
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
     padding: 25px 120px;
 
@@ -94,10 +106,28 @@ button {
     z-index: 10;
 }
 
-.header a {
+.header-logo {
     text-decoration: none;
     text-transform: capitalize;
     color: inherit;
+}
+
+.nav-link {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: inherit;
+    padding: 8px 21px;
+    border-radius: 16px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: rgba(242, 120, 92, 0.8);
+    box-shadow: 0px 1px 1px #793c2e;
+}
+
+.nav-link:active {
+    box-shadow: inset 0px 2px 2px #793c2e;
 }
 
 .header-name {
@@ -124,14 +154,6 @@ button {
     flex-wrap: wrap;
 }
 
-.nav-item {
-    margin-right: 42px;
-}
-
-.nav-item:last-of-type {
-    margin-right: 0;
-}
-
 .user-enter {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 
@@ -147,12 +169,11 @@ button {
 
 .preview {
     margin-top: -90px;
-    padding: 122px 428px 255px 120px;
+    padding: 121px 428px 255px 120px;
 
     background-image: url(../images/bg_1.jpg);
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: cover;
 
     color: var(--basic-white);
     font-family: 'Aleo', serif;
@@ -165,7 +186,6 @@ button {
 
     margin: 0;
     margin-bottom: 32px;
-
 }
 
 .preview-text {
@@ -181,7 +201,7 @@ button {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
 
-    padding: 18px;
+    padding: 19px;
 
     display: flex;
     justify-content: space-between;
@@ -198,6 +218,15 @@ button {
     line-height: 29px;
     
     color: var(--basic-red);
+}
+
+.preview-input:focus {
+    outline: none;
+}
+
+.preview-search:focus-within {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0px 2px 4px #4c4c4c;
 }
 
 .preview-button {
@@ -223,7 +252,6 @@ button {
 
     display: flex;
     flex-direction: column;
-            /* justify-content: center; */
     align-items: center;
 }
 
@@ -243,6 +271,15 @@ button {
 
     background-color: var(--basic-red);
     border-radius: 16px;
+}
+
+.step-link:hover,
+.step-link:focus {
+    background-color: var(--basic-lighter-red);
+}
+
+.step-link:active {
+    box-shadow: inset 0px 2px 2px #793c2e;
 }
 
 .step-text {
@@ -266,8 +303,6 @@ button {
 
     padding-top: 5px;
     margin-bottom: 20px;
-    /*        position: relative;
-            left: 0px;*/
 }
 
 .destination-item {
@@ -289,7 +324,7 @@ button {
 
     position: absolute;
     left: 15px;
-    bottom: 40px;
+    bottom: 44px;
     margin: 0;
 }
 
@@ -307,12 +342,20 @@ button {
     margin-right: 10px;
     
     background: var(--basic-red);
+    border: none;
     opacity: 0.5;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .btn-pagination:last-of-type {
     margin-right: 0;
+}
+
+.btn-pagination:hover,
+.btn-pagination:focus {
+    opacity: 0.7;
+    box-shadow: 0px 2px 2px #793c2e;
 }
 
 .btn-pag-active {
@@ -321,7 +364,7 @@ button {
 
 .button-find {
     margin-bottom: 80px;
-    padding: 13px 33px;
+    padding: 12px 32px;
 }
 
 /* STORIES */
@@ -332,7 +375,7 @@ button {
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    padding-bottom: 70px;
+    padding-bottom: 64px;
 }
 
 .stories-list {
@@ -349,7 +392,7 @@ button {
 
 .stories-wrapper {
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 40px 120px 42px 120px;
+    padding: 41px 120px;
 }
 
 .story-item {
@@ -391,6 +434,15 @@ button {
     text-transform: capitalize;
 }
 
+.story-link:hover,
+.story-link:focus {
+    text-decoration: none;
+}
+
+.story-link:active {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .button-see {
     padding: 11px 36px;
 }
@@ -398,31 +450,30 @@ button {
 /* FOOTER */
 
 .footer {
-    margin-top: -70px;
+    margin-top: -64px;
 
     display: flex;
     justify-content: space-between;
-
-    padding: 14px 120px;
-}
-
-.rs-links a {
-    margin-right: 20px;
-}
-
-.rs-links a:last-of-type {
-    margin-right: 0;
-}
-
-.footer-copyright {
-    display: flex;
     align-items: center;
+
+    padding: 13px 120px;
+}
+
+.rs-links {
+    display: flex;
+}
+
+.rs-link {
+    margin-right: 20px;
+    display: block;
+}
+
+.rs-link:last-of-type {
+    margin-right: 0;
 }
 
 .text-copyright {
     margin: 0;
-    margin-left: 13px;
-    text-align: center;
 
     font-family: 'Red Hat Text';
     font-weight: 500;
@@ -435,6 +486,7 @@ button {
     list-style: none;
 
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
@@ -447,3 +499,14 @@ button {
     margin-right: 0;
 }
 
+.social-link {
+    display: block;
+}
+
+.social-link:hover,
+.rs-link:hover ,
+.social-link:focus,
+.rs-link:focus {
+    transform: scale(1.1);
+    cursor: pointer;
+}
