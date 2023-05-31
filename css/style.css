@@ -559,12 +559,99 @@ img {
 
 /* MOBILE VERSION */
 
+.input-burger-menu {
+    opacity: 0;
+    width: calc(100% - 140px);
+    height: 1475px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 20;
+}
+
+
 .burger-menu {
     display: none;
+    position: relative;
+}
+
+.burger-menu-close {
+    display: none;
+}
+
+.burger-menu::before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    right: 0;
+    width: 35px;
+    height: 32px;
+    background: url(../images/burger_menu.svg) no-repeat center;
 }
 
 .burger-item {
     display: none;
+}
+
+.input-burger-menu:checked ~ .nav-list {
+    display: flex;
+    justify-content: flex-end;
+
+    width: 165px;
+    padding: 44px 15px 20px 0px;
+
+    font-size: 16px;
+    line-height: 1.3125;
+    background-color: var(--basic-red);
+    box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+    border-radius: 10px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.input-burger-menu:checked ~ .nav-list > .burger-item {
+    display: block;
+}
+
+.input-burger-menu:checked~.nav-list>.nav-item {
+    margin-bottom: 10px;
+}
+
+.input-burger-menu:checked ~ .nav-list .nav-link {
+    position: relative;
+    z-index: 30;
+    padding: 0;
+}
+
+.input-burger-menu:checked ~ .burger-menu-close {
+    display: block;
+    padding: 0;
+    position: absolute;
+    top: 8px;
+    right: 127px;
+    z-index: 10;
+    
+    border: none;
+    background: transparent;
+}
+
+.shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 5;
+    display: none;
+}
+
+.input-burger-menu:checked ~ .shadow {
+    display: block;
 }
 
 
@@ -890,8 +977,21 @@ img {
         display: block;
     }
 
-    .nav-menu, .user-navigation {
+    .nav-list, .user-navigation {
         display: none;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+        color: rgba(242, 120, 92, 0.5);
+        text-shadow: 0px 1px 1px #793c2e;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    
+    .nav-link:active {
+        box-shadow: none;
+        text-shadow: inset 0px 2px 2px #793c2e;
     }
 
     .header {
