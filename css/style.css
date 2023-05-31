@@ -316,6 +316,10 @@ img {
 
 /* DESTINATION */
 
+.btn-arrow {
+    display: none;
+}
+
 .destination-wrapper {
     display: flex;
     justify-content: center;
@@ -985,6 +989,23 @@ img {
         margin-bottom: 0;
     }
 
+    .btn-arrow {
+        display: block;
+        position: absolute;
+        top: 130px;
+        z-index: 5;
+        background: transparent;
+        border: none;
+    }
+
+    .arrow-left {
+        left: 20px;
+    }
+
+    .arrow-right {
+        right: 20px;
+    }
+
     .destination-img {
         width: 360px;
         height: 210px;
@@ -1023,6 +1044,14 @@ img {
         width: 8px;
         height: 8px;
         margin-right: 6px;
+    }
+
+    .btn-pag-active {
+        opacity: 0.5;
+    }
+
+    .btn-mobile-active {
+        opacity: 1;
     }
 
     .button-arrow {
@@ -1116,5 +1145,4 @@ img {
     .step-item:nth-of-type(2) {
         width: fit-content;
     }
-
 }
