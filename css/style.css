@@ -607,12 +607,17 @@ img {
     display: none;
 }
 
+.shadow-active {
+    display: block;
+}
+
 /* LOGIN POP-UP */
 
 .login {
-    display: flex;
+    display: none;
     justify-content: center;
 }
+
 
 .login-title {
     font-family: 'Aleo';
@@ -628,6 +633,7 @@ img {
 
 .login-wrapper {
     position: fixed;
+    z-index: 30;
     top: 100px;
 
     width: 650px;
@@ -683,8 +689,6 @@ img {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.2;
-   
-    
     color: rgba(13, 96, 111, 0.5);
 
     position: relative;
@@ -703,7 +707,7 @@ img {
     height: 1px;
     position: absolute;
     left: 0;
-    top: 23px;
+    top: 20px;
     background-color: rgba(13, 96, 111, 0.5);
 }
 
@@ -714,7 +718,7 @@ img {
     height: 1px;
     position: absolute;
     right: 0;
-    top: 23px;
+    top: 20px;
     background-color: rgba(13, 96, 111, 0.5);
 }
 
@@ -764,7 +768,7 @@ img {
     outline: none;
 }
 
-.signin-button {
+.sign-button {
     width: 100%;
     padding: 14px;
 
@@ -801,7 +805,7 @@ img {
 }
 
 .new-register {
-    margin-top: 26px;
+    margin-top: 25px;
     padding-top: 20px;
 
     display: flex;
@@ -811,6 +815,18 @@ img {
 
 .new-register .register-link {
     padding-left: 5px;
+}
+
+.login-active {
+    display: flex;
+}
+
+.log-hidden {
+    display: none;
+}
+
+.login-check {
+    
 }
 
 /* MEDIA */
@@ -1152,20 +1168,12 @@ img {
         transform: translate(0%);
     }
 
-    .shadow-active {
-        display: block;
-    }
-
     .burger-menu-close {
         display: block;
     }
 
     .burger-active {
         transform: translate(0%);
-    }
-
-    .shadow-active {
-        display: block;
     }
 
     .burger-item {
