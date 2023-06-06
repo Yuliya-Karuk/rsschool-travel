@@ -106,15 +106,24 @@ img {
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
     padding: 25px 120px;
 
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
 
-    color: var(--basic-white);
+    color: var(--basic-white); */
 
     position: relative;
     z-index: 10;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+        
+    color: var(--basic-white);
 }
 
 .header-logo {
@@ -596,6 +605,212 @@ img {
     opacity: 0.5;
     z-index: 20;
     display: none;
+}
+
+/* LOGIN POP-UP */
+
+.login {
+    display: flex;
+    justify-content: center;
+}
+
+.login-title {
+    font-family: 'Aleo';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--basic-green);
+
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.login-wrapper {
+    position: fixed;
+    top: 100px;
+
+    width: 650px;
+    padding: 25px 45px;
+
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+.login-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-button {
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    margin-bottom: 20px;
+    
+    display: flex;
+    justify-content: center;
+
+}
+
+.login-facebook {
+    background: #1877F2;
+}
+
+.social-button-text {
+    font-family: 'Red Hat Text';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--basic-white);
+
+}
+
+.social-button svg {
+    margin-right: 10px;
+}
+
+.login-google .social-button-text {
+    color: var(--basic-green);
+}
+
+.login-or {
+    padding-top: 10px;
+    font-family: 'Aleo';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+   
+    
+    color: rgba(13, 96, 111, 0.5);
+
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.login-or-text {
+    text-align: center;
+    margin: 0;
+}
+
+.login-or-text::before {
+    content: '';
+    display: block;
+    width: 261px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 23px;
+    background-color: rgba(13, 96, 111, 0.5);
+}
+
+.login-or-text::after {
+    content: '';
+    display: block;
+    width: 261px;
+    height: 1px;
+    position: absolute;
+    right: 0;
+    top: 23px;
+    background-color: rgba(13, 96, 111, 0.5);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.login-label {
+    font-family: 'Aleo';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--basic-green);
+
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+.login-input {
+    width: 100%;
+    height: 54px;
+    margin-bottom: 20px;
+    padding: 15px;
+
+    border: none;
+    background: var(--basic-white);
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+
+    font-family: 'Red Hat Text';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--basic-green);
+}
+
+.login-input:focus {
+    outline: none;
+}
+
+.signin-button {
+    width: 100%;
+    padding: 14px;
+
+    background-color: var(--basic-green);
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+
+    font-family: 'Red Hat Text';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--basic-white);
+}
+
+.register-text {
+    font-family: 'Aleo';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.2;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    color: rgba(13, 96, 111, 0.5);
+    margin: 0;
+}
+
+.login-forgot {
+    display: block;
+    text-align: center;
+    margin-top: 11px;
+}
+
+.register-link {
+    color: var(--basic-green);
+}
+
+.new-register {
+    margin-top: 26px;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(13, 96, 111, 0.5);;
+}
+
+.new-register .register-link {
+    padding-left: 5px;
 }
 
 /* MEDIA */

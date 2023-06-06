@@ -18,52 +18,109 @@
 
         <header class="header">
             <div class="shadow"></div>
-            <a class="header-logo" href="#">
-                <img src="images/logo.svg" alt="logo Travel Portal" width="30" height="30">
-                <span class="header-name">Travel portal</span>
-            </a>
-
-            <nav class="nav-menu">
-                <!--<label class="burger-menu" for="burger-menu"></label>
-                <input class="input-burger-menu" id="burger-menu" type="checkbox" aria-label="Burger Navigation Menu">-->
-
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="#preview">How it works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#steps">Plan your trip</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#stories">Travel stories</a></li>
-                    <li class="nav-item burger-item"><a class="nav-link" href="#">Account</a></li>
-                    <li class="nav-item burger-item"><a class="nav-link" href="#social-media">Social Media</a></li>
-                </ul>
-
-                <button class="burger-menu-close" type="button">
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="header-wrapper">
+                <a class="header-logo" href="#">
+                    <img src="images/logo.svg" alt="logo Travel Portal" width="30" height="30">
+                    <span class="header-name">Travel portal</span>
+                </a>
+                
+                <nav class="nav-menu">
+                    <!--<label class="burger-menu" for="burger-menu"></label>
+                                <input class="input-burger-menu" id="burger-menu" type="checkbox" aria-label="Burger Navigation Menu">-->
+                
+                    <ul class="nav-list">
+                        <li class="nav-item"><a class="nav-link" href="#preview">How it works</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#steps">Plan your trip</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#stories">Travel stories</a></li>
+                        <li class="nav-item burger-item"><a class="nav-link" href="#">Account</a></li>
+                        <li class="nav-item burger-item"><a class="nav-link" href="#social-media">Social Media</a></li>
+                    </ul>
+                
+                    <button class="burger-menu-close" type="button">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.1751 15L22.2501 8.925C22.3866 8.76559 22.4579 8.56052 22.4498 8.35079C22.4417 8.14106 22.3548 7.94211 22.2064 7.7937C22.058 7.64529 21.859 7.55835 21.6493 7.55024C21.4395 7.54214 21.2345 7.61348 21.0751 7.75L15.0001 13.825L8.92506 7.74167C8.76564 7.60515 8.56058 7.53381 8.35085 7.54191C8.14112 7.55001 7.94217 7.63696 7.79376 7.78537C7.64534 7.93378 7.5584 8.13273 7.5503 8.34246C7.5422 8.55219 7.61354 8.75725 7.75006 8.91667L13.8251 15L7.74173 21.075C7.65449 21.1497 7.58364 21.2416 7.53362 21.345C7.4836 21.4484 7.45549 21.561 7.45106 21.6758C7.44663 21.7906 7.46597 21.905 7.50786 22.0119C7.54976 22.1189 7.61331 22.216 7.69452 22.2972C7.77573 22.3784 7.87285 22.442 7.97979 22.4839C8.08673 22.5258 8.20117 22.5451 8.31594 22.5407C8.4307 22.5362 8.54331 22.5081 8.6467 22.4581C8.75009 22.4081 8.84202 22.3372 8.91673 22.25L15.0001 16.175L21.0751 22.25C21.2345 22.3865 21.4395 22.4579 21.6493 22.4498C21.859 22.4417 22.058 22.3547 22.2064 22.2063C22.3548 22.0579 22.4417 21.8589 22.4498 21.6492C22.4579 21.4395 22.3866 21.2344 22.2501 21.075L16.1751 15Z"
+                                fill="white" fill-opacity="0.7" />
+                        </svg>
+                    </button>
+                
+                </nav>
+                
+                <div class="user-navigation">
+                    <button class="btn user-enter" type="button">Login</button>
+                </div>
+                
+                <button class="btn-burger-menu" type="button" aria-label="Burger Navigation Menu">
+                    <svg class="burger-svg" width="35" height="32" viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
-                            d="M16.1751 15L22.2501 8.925C22.3866 8.76559 22.4579 8.56052 22.4498 8.35079C22.4417 8.14106 22.3548 7.94211 22.2064 7.7937C22.058 7.64529 21.859 7.55835 21.6493 7.55024C21.4395 7.54214 21.2345 7.61348 21.0751 7.75L15.0001 13.825L8.92506 7.74167C8.76564 7.60515 8.56058 7.53381 8.35085 7.54191C8.14112 7.55001 7.94217 7.63696 7.79376 7.78537C7.64534 7.93378 7.5584 8.13273 7.5503 8.34246C7.5422 8.55219 7.61354 8.75725 7.75006 8.91667L13.8251 15L7.74173 21.075C7.65449 21.1497 7.58364 21.2416 7.53362 21.345C7.4836 21.4484 7.45549 21.561 7.45106 21.6758C7.44663 21.7906 7.46597 21.905 7.50786 22.0119C7.54976 22.1189 7.61331 22.216 7.69452 22.2972C7.77573 22.3784 7.87285 22.442 7.97979 22.4839C8.08673 22.5258 8.20117 22.5451 8.31594 22.5407C8.4307 22.5362 8.54331 22.5081 8.6467 22.4581C8.75009 22.4081 8.84202 22.3372 8.91673 22.25L15.0001 16.175L21.0751 22.25C21.2345 22.3865 21.4395 22.4579 21.6493 22.4498C21.859 22.4417 22.058 22.3547 22.2064 22.2063C22.3548 22.0579 22.4417 21.8589 22.4498 21.6492C22.4579 21.4395 22.3866 21.2344 22.2501 21.075L16.1751 15Z"
-                            fill="white" fill-opacity="0.7" />
+                            d="M29.2396 14.6667H5.76042C4.99527 14.6667 4.375 15.2338 4.375 15.9333V16.0667C4.375 16.7662 4.99527 17.3333 5.76042 17.3333H29.2396C30.0047 17.3333 30.625 16.7662 30.625 16.0667V15.9333C30.625 15.2338 30.0047 14.6667 29.2396 14.6667Z"
+                            fill="white" />
+                        <path
+                            d="M29.2396 21.3333H5.76042C4.99527 21.3333 4.375 21.9004 4.375 22.6V22.7333C4.375 23.4329 4.99527 24 5.76042 24H29.2396C30.0047 24 30.625 23.4329 30.625 22.7333V22.6C30.625 21.9004 30.0047 21.3333 29.2396 21.3333Z"
+                            fill="white" />
+                        <path
+                            d="M29.2396 8H5.76042C4.99527 8 4.375 8.56711 4.375 9.26667V9.4C4.375 10.0996 4.99527 10.6667 5.76042 10.6667H29.2396C30.0047 10.6667 30.625 10.0996 30.625 9.4V9.26667C30.625 8.56711 30.0047 8 29.2396 8Z"
+                            fill="white" />
                     </svg>
                 </button>
-
-            </nav>
-
-            <div class="user-navigation">
-                <button class="btn user-enter" type="button">Login</button>
             </div>
-
-            <button class="btn-burger-menu" type="button" aria-label="Burger Navigation Menu">
-                <svg class="burger-svg" width="35" height="32" viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M29.2396 14.6667H5.76042C4.99527 14.6667 4.375 15.2338 4.375 15.9333V16.0667C4.375 16.7662 4.99527 17.3333 5.76042 17.3333H29.2396C30.0047 17.3333 30.625 16.7662 30.625 16.0667V15.9333C30.625 15.2338 30.0047 14.6667 29.2396 14.6667Z"
-                        fill="white" />
-                    <path
-                        d="M29.2396 21.3333H5.76042C4.99527 21.3333 4.375 21.9004 4.375 22.6V22.7333C4.375 23.4329 4.99527 24 5.76042 24H29.2396C30.0047 24 30.625 23.4329 30.625 22.7333V22.6C30.625 21.9004 30.0047 21.3333 29.2396 21.3333Z"
-                        fill="white" />
-                    <path
-                        d="M29.2396 8H5.76042C4.99527 8 4.375 8.56711 4.375 9.26667V9.4C4.375 10.0996 4.99527 10.6667 5.76042 10.6667H29.2396C30.0047 10.6667 30.625 10.0996 30.625 9.4V9.26667C30.625 8.56711 30.0047 8 29.2396 8Z"
-                        fill="white" />
-                </svg>
-            </button>
-
+            
+            <div class="login">
+                <div class="login-wrapper">
+                    <h2 class="login-title">Log in to your account</h2>
+                    <div class="login-social">
+                        <button class="social-button login-facebook">
+                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23 12.0699C23 5.71857 17.8513 0.569853 11.5 0.569853C5.14872 0.569853 0 5.71857 0 12.0699C0 17.8098 4.20538 22.5674 9.70312 23.4301V15.3941H6.7832V12.0699H9.70312V9.53626C9.70312 6.65407 11.42 5.06204 14.0468 5.06204C15.305 5.06204 16.6211 5.28665 16.6211 5.28665V8.11673H15.171C13.7424 8.11673 13.2969 9.00319 13.2969 9.91264V12.0699H16.4863L15.9765 15.3941H13.2969V23.4301C18.7946 22.5674 23 17.8098 23 12.0699Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="social-button-text">Sign In with Facebook</span>
+                        </button>
+                        <button class="social-button login-google">
+                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M22.54 12.2614C22.54 11.4459 22.4668 10.6618 22.3309 9.90909H11.5V14.3575H17.6891C17.4225 15.795 16.6123 17.013 15.3943 17.8284V20.7139H19.1109C21.2855 18.7118 22.54 15.7636 22.54 12.2614Z"
+                                    fill="#4285F4" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.5 23.4998C14.605 23.4998 17.2081 22.4701 19.1109 20.7137L15.3943 17.8282C14.3645 18.5182 13.0472 18.926 11.5 18.926C8.50474 18.926 5.96951 16.903 5.06519 14.1848H1.22314V17.1644C3.11542 20.9228 7.00451 23.4998 11.5 23.4998Z"
+                                    fill="#34A853" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.06523 14.1851C4.83523 13.4951 4.70455 12.758 4.70455 12.0001C4.70455 11.2421 4.83523 10.5051 5.06523 9.81506V6.83552H1.22318C0.444318 8.38802 0 10.1444 0 12.0001C0 13.8557 0.444318 15.6121 1.22318 17.1646L5.06523 14.1851Z"
+                                    fill="#FBBC05" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.5 5.07386C13.1884 5.07386 14.7043 5.65409 15.8961 6.79364L19.1945 3.49523C17.2029 1.63955 14.5997 0.5 11.5 0.5C7.00451 0.5 3.11542 3.07705 1.22314 6.83545L5.06519 9.815C5.96951 7.09682 8.50474 5.07386 11.5 5.07386Z"
+                                    fill="#EA4335" />
+                            </svg>
+                            <span class="social-button-text">Sign In with Google</span>
+                        </button>
+                        <div class="login-or">
+                            <p class="login-or-text">or</p>
+                        </div>
+                    </div>
+                    <div class="register">
+                        <form class="login-form" action="#" method="post">
+                            <ul class="login-list">
+                                <li class="login-item">
+                                    <label class="login-label" for="email">E-mail</label>
+                                    <input class="login-input" id="email" type="email" name="email" placeholder=""></input>
+                                </li>
+                                <li class="login-item">
+                                    <label class="login-label" for="password">Password</label>
+                                    <input class="login-input" id="password" type="password" name="password" placeholder=""></input>
+                                </li>
+                            </ul>
+                            <button class="signin-button" type="submit">Sign In</button>
+                        </form>
+                        <a class="login-forgot register-text register-link" href="#">Forgot Your Password?</a>
+                        <div class="new-register">
+                            <p class="register-text">Don’t have an account? </p>
+                            <a class="register-text register-link" href="#">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main class="content">
@@ -308,8 +365,6 @@
             </div>
         </footer>
 
-        <div class="login">
-        </div>
     </div>
     <script src="js/index.js"></script>
     <script src="js/main.js"></script>
