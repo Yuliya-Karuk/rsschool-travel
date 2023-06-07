@@ -322,12 +322,16 @@ img {
     display: none;
 }
 
+.destination {
+    overflow: hidden;
+}
+
 .destination-wrapper {
     display: flex;
     justify-content: center;
     gap: 60px;
 
-    overflow: hidden;
+    /*overflow: hidden;*/
 
     padding-top: 5px;
     margin-bottom: 20px;
@@ -376,7 +380,7 @@ img {
     border-radius: 50%;
 
     cursor: pointer;
-    transition-duration: 0.4s;
+    transition-duration: 0.1s;
 }
 
 .btn-pagination:last-of-type {
@@ -865,6 +869,38 @@ img {
     transform: translateY(-5%);
 }
 
+/* SLIDER */
+
+@keyframes slide-right {
+    from {
+        transform: translateX(0px)
+    }
+
+    to {
+        transform: translateX(860px)
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(0px)
+    }
+
+    to {
+        transform: translateX(-860px)
+    }
+}
+
+.transition-right {
+    animation-name: slide-right;
+    animation-duration: 1s;
+}
+
+.transition-left {
+    animation-name: slide-left;
+    animation-duration: 1s;
+}
+
 /* MEDIA */
 
 @media screen and (max-width: 1366px) {
@@ -974,6 +1010,26 @@ img {
 
     .destination-img {
         width: 600px;
+    }
+
+    @keyframes slide-right {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(630px)
+        }
+    }
+
+    @keyframes slide-left {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(-630px)
+        }
     }
 
     .stories-wrapper {
@@ -1087,6 +1143,26 @@ img {
         bottom: 20px;
     }
 
+    @keyframes slide-right {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(420px)
+        }
+    }
+
+    @keyframes slide-left {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(-420px)
+        }
+    }
+
     .stories-list {
         margin-bottom: 5px;
     }
@@ -1121,6 +1197,26 @@ img {
     .destination-img {
         width: 300px;
     }
+
+    @keyframes slide-right {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(320px)
+        }
+    }
+
+    @keyframes slide-left {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(-320px)
+        }
+    }
     
     .story-img {
         max-width: 200px;
@@ -1144,6 +1240,26 @@ img {
     
     .destination-img {
         width: 250px;
+    }
+
+    @keyframes slide-right {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(265px)
+        }
+    }
+
+    @keyframes slide-left {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(-265px)
+        }
     }
     
     .destination-text {
@@ -1349,19 +1465,10 @@ img {
     .btn-arrow {
         display: block;
         position: absolute;
-        top: 130px;
         z-index: 5;
 
         background: transparent;
         border: none;
-    }
-
-    .arrow-left {
-        left: 20px;
-    }
-
-    .arrow-right {
-        right: 20px;
     }
 
     .destination-img {
@@ -1369,9 +1476,24 @@ img {
         height: 210px;
     }
 
-    .destination-item {
-        display: none;
-        position: relative;
+    @keyframes slide-right {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(375px)
+        }
+    }
+
+    @keyframes slide-left {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(-375px)
+        }
     }
 
     .destination-wrapper {
@@ -1387,8 +1509,14 @@ img {
         top: 10px;
     }
 
-    .destination-active {
-        display: block;
+    .arrow-left {
+        top: 130px;
+        left: 20px;
+    }
+
+    .arrow-right {
+        top: 130px;
+        right: 20px;
     }
     
     .destination-pagination {
@@ -1402,14 +1530,6 @@ img {
         width: 8px;
         height: 8px;
         margin-right: 6px;
-    }
-
-    .btn-pag-active {
-        opacity: 0.5;
-    }
-
-    .btn-mobile-active {
-        opacity: 1;
     }
 
     .button-arrow {
@@ -1482,6 +1602,26 @@ img {
     .destination-img {
         width: calc(100vw - 30px);
     }
+
+    @keyframes slide-right {
+        from {
+            transform: translateX(0px);
+        }
+
+        to {
+            transform: translateX(calc(100vw - 15px));
+        }
+    }
+
+    @keyframes slide-left {
+        from {
+            transform: translateX(0px)
+        }
+
+        to {
+            transform: translateX(calc(-100vw + 15px))
+        }
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -1506,3 +1646,4 @@ img {
         width: fit-content;
     }
 }
+

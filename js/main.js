@@ -164,3 +164,86 @@ signButton.addEventListener("click", function(evt) {
     evt.preventDefault();
     alert(`E-mail: ${inputEmail.value} \nPassword: ${inputPassword.value}`)
 });
+
+/* SLIDER */
+
+const slider = document.querySelector(".destination-wrapper")
+const item0 = document.querySelector("#item0")
+const item1 = document.querySelector("#item1")
+const item2 = document.querySelector("#item2")
+const item3 = document.querySelector("#item3")
+const item4 = document.querySelector("#item4")
+const arrowLeft = document.querySelector(".arrow-left")
+const arrowRight = document.querySelector(".arrow-right")
+let startActivePagination = document.querySelector(".btn-pag-active")
+const pagination = document.querySelectorAll(".btn-pagination")
+
+
+function slideLeft() {
+    slider.classList.add('transition-left');
+    startActivePagination.classList.remove('btn-pag-active')
+}
+
+function slideRight() {
+    slider.classList.add('transition-right');
+    startActivePagination.classList.remove('btn-pag-active')
+}
+
+ if (document.documentElement.clientWidth > 390) { 
+    item1.addEventListener('click', slideRight); //слушатель событий
+
+    item3.addEventListener('click', slideLeft); //слушатель событий
+ }
+
+if (document.documentElement.clientWidth <= 390) {
+    startActivePagination.classList.remove("btn-pag-active") // восстанавливаем активный элемент в левое положение
+    startActivePagination = pagination[0]
+    startActivePagination.classList.add("btn-pag-active")
+    item0.innerHTML = item2.innerHTML // перетасовывам слайды на первоначальное положение в макете
+    item2.innerHTML = item1.innerHTML
+    item1.innerHTML = item3.innerHTML
+    item3.innerHTML = item0.innerHTML
+    item4.innerHTML = item1.innerHTML
+
+    arrowRight.addEventListener('click', slideLeft); //слушатель событий
+
+    arrowLeft.addEventListener('click', slideRight); //слушатель событий
+}
+
+slider.addEventListener('animationend', (animation) => { // слушаем куда был сдвиг
+	let itemBox = item2.innerHTML // активный слайдер
+
+	if (animation.animationName === 'slide-right') { // если была анимация вправо
+		slider.classList.remove('transition-right') // удаляем анимацию
+		item2.innerHTML = item1.innerHTML // меняем внутренности слайдов
+		item1.innerHTML = item0.innerHTML
+		item3.innerHTML = itemBox
+		item0.innerHTML = itemBox
+		item4.innerHTML = item1.innerHTML
+
+        if (startActivePagination.previousElementSibling !== null) { // сдвиг активного елемента в пагинаци
+            startActivePagination.previousElementSibling.classList.add("btn-pag-active")
+            startActivePagination = startActivePagination.previousElementSibling
+        } else {
+            startActivePagination = pagination[2]
+            startActivePagination.classList.add("btn-pag-active")
+        }
+    }
+
+    if (animation.animationName === 'slide-left') { // если была анимация влево
+		slider.classList.remove('transition-left') // удаляем анимацию
+		item2.innerHTML = item3.innerHTML // меняем внутренности слайдов
+		item3.innerHTML = item4.innerHTML
+		item1.innerHTML = itemBox
+		item4.innerHTML = itemBox
+		item0.innerHTML = item3.innerHTML
+
+        if (startActivePagination.nextElementSibling !== null) { // сдвиг активного елемента в пагинации
+            startActivePagination.nextElementSibling.classList.add("btn-pag-active")
+            startActivePagination = startActivePagination.nextElementSibling
+        } else {
+            startActivePagination = pagination[0]
+            startActivePagination.classList.add("btn-pag-active")
+        }
+    }
+})
