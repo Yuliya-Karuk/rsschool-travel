@@ -67,6 +67,7 @@ for (let i = 0; i < navItems.length; i++) {
 
 const loginLink = document.querySelector(".user-enter") // кнопка login
 const login = document.querySelector(".login-wrapper"); // login popup
+const accountLink = document.querySelector(".account-link")
 
 function handlerLogin(evt) {
     evt.preventDefault();
@@ -84,6 +85,11 @@ loginLink.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 13) {
         handlerLogin(evt);
     }
+});
+
+/* показать Login Popup при клике мышкой на ссылку*/
+accountLink.addEventListener("click", function (evt) {
+    handlerLogin(evt);
 });
 
 /* закрыть Login Popup при нажатии на эск*/
