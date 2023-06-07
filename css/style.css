@@ -636,7 +636,8 @@ img {
     transform: translateY(-115%);
     transition: all 0.2s linear;
 
-    width: 650px;
+    max-width: 650px;
+    width: 100%;
     padding: 25px 45px;
 
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
@@ -717,7 +718,7 @@ img {
 .login-or-text::before {
     content: '';
     display: block;
-    width: 261px;
+    width: 46.6%;
     height: 1px;
     position: absolute;
     left: 0;
@@ -728,7 +729,7 @@ img {
 .login-or-text::after {
     content: '';
     display: block;
-    width: 261px;
+    width: 46.6%;
     height: 1px;
     position: absolute;
     right: 0;
@@ -1172,6 +1173,14 @@ img {
     .section-title {
         font-size: 20px;
     }
+
+    .login-title {
+        font-size: 28px;
+    }
+
+    .login-wrapper {
+        padding: 20px 20px;
+    }
 }
 
 @media screen and (max-width: 391px) {
@@ -1468,6 +1477,10 @@ img {
         justify-content: center;
         position: relative;
         padding-right: 10px;
+    }
+
+    .login-title {
+        font-size: 24px;
     }
 }
 
