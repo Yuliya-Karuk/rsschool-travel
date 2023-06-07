@@ -614,10 +614,9 @@ img {
 /* LOGIN POP-UP */
 
 .login {
-    display: none;
+    display: flex;
     justify-content: center;
 }
-
 
 .login-title {
     font-family: 'Aleo';
@@ -634,7 +633,8 @@ img {
 .login-wrapper {
     position: fixed;
     z-index: 30;
-    top: 100px;
+    transform: translateY(-115%);
+    transition: all 0.2s linear;
 
     width: 650px;
     padding: 25px 45px;
@@ -651,15 +651,29 @@ img {
 
 .social-button {
     padding: 15px;
+    margin-bottom: 20px;
 
     border: none;
     border-radius: 10px;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
-    margin-bottom: 20px;
+    background-color: var(--basic-white);
+    opacity: 1;
     
     display: flex;
     justify-content: center;
 
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.social-button:hover,
+.social-button:focus {
+    opacity: 0.7;
+    box-shadow: 0px 0px 5px rgba(13, 96, 111, 0.16), 0px 4px 5px rgba(13, 96, 111, 0.32);
+}
+
+.social-button:active {
+    box-shadow: inset 0px 1px 2px #4c4c4c;
 }
 
 .login-facebook {
@@ -672,7 +686,6 @@ img {
     font-size: 20px;
     line-height: 1.3;
     color: var(--basic-white);
-
 }
 
 .social-button svg {
@@ -685,6 +698,7 @@ img {
 
 .login-or {
     padding-top: 10px;
+
     font-family: 'Aleo';
     font-weight: 700;
     font-size: 20px;
@@ -743,7 +757,6 @@ img {
 
     display: block;
     margin-bottom: 5px;
-
 }
 
 .login-input {
@@ -756,16 +769,26 @@ img {
     background: var(--basic-white);
     box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
+    opacity: 1;
 
     font-family: 'Red Hat Text';
     font-weight: 400;
     font-size: 20px;
     line-height: 1.3;
     color: var(--basic-green);
+
+    transition-duration: 0.4s;
+}
+
+.login-input:hover {
+    opacity: 0.7;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.24), inset 0px 2px 3px rgba(13, 96, 111, 0.48);
 }
 
 .login-input:focus {
     outline: none;
+    opacity: 1;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.24), inset 0px 2px 3px rgba(13, 96, 111, 0.48);
 }
 
 .sign-button {
@@ -776,12 +799,26 @@ img {
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     border: none;
+    opacity: 1;
 
     font-family: 'Red Hat Text';
     font-weight: 400;
     font-size: 20px;
     line-height: 1.3;
     color: var(--basic-white);
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.sign-button:hover,
+.sign-button:focus {
+    opacity: 0.7;
+    box-shadow: 0px 0px 5px rgba(13, 96, 111, 0.16), 0px 4px 5px rgba(13, 96, 111, 0.32);
+}
+
+.sign-button:active {
+    box-shadow: inset 0px 2px 2px #05262c;
 }
 
 .register-text {
@@ -804,6 +841,15 @@ img {
     color: var(--basic-green);
 }
 
+.register-link:hover,
+.register-link:focus {
+    text-decoration: none;
+}
+
+.register-link:active {
+    color:rgba(255, 255, 255, 0.5)
+}
+
 .new-register {
     margin-top: 25px;
     padding-top: 20px;
@@ -817,16 +863,12 @@ img {
     padding-left: 5px;
 }
 
-.login-active {
-    display: flex;
-}
-
 .log-hidden {
     display: none;
 }
 
-.login-check {
-    
+.login-wrapper-active {
+    transform: translateY(-5%);
 }
 
 /* MEDIA */

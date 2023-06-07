@@ -66,51 +66,50 @@ for (let i = 0; i < navItems.length; i++) {
 /* POP UP LOGIN */
 
 const loginLink = document.querySelector(".user-enter") // кнопка login
-const login =  document.querySelector(".login"); // боковое бургер меню
+const login = document.querySelector(".login-wrapper"); // login popup
 
 function handlerLogin(evt) {
     evt.preventDefault();
-    login.classList.toggle("login-active");
     shadow.classList.toggle("shadow-active");
+    login.classList.toggle("login-wrapper-active");
 }
 
-
-/* показать бургер меню при клике мышкой на ссылку*/
+/* показать Login Popup при клике мышкой на ссылку*/
 loginLink.addEventListener("click", function (evt) {
     handlerLogin(evt);
 });
 
-/* показать бургер меню при нажатии энтер*/
+/* показать Login Popup при нажатии энтер*/
 loginLink.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 13) {
         handlerLogin(evt);
     }
 });
 
-/* закрыть окно при нажатии на эск*/
+/* закрыть Login Popup при нажатии на эск*/
 window.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
-        if (login.classList.contains("login-active") && shadow.classList.contains("shadow-active")) {
+        if (login.classList.contains("login-wrapper-active") && shadow.classList.contains("shadow-active")) {
             handlerLogin(evt);
         }
     }
 });
 
-/* закрыть окно при нажатии на тень*/
+/* закрыть Login Popup при нажатии на тень*/
 shadow.addEventListener("click", function(evt) {
-    if (login.classList.contains("login-active") && shadow.classList.contains("shadow-active")) {
+    if (login.classList.contains("login-wrapper-active") && shadow.classList.contains("shadow-active")) {
         handlerLogin(evt);
     }
 });
 
-const changeLink = document.querySelector(".signup-link") // кнопка login
-const socialBlock =  document.querySelector(".login-social"); // боковое бургер меню
-const forgotLink =  document.querySelector(".login-forgot"); // боковое бургер меню
-const loginTitle =  document.querySelector(".login-title"); // боковое бургер меню signin-button
-const signButton =  document.querySelector(".sign-button"); 
-const signText =  document.querySelector(".signup-text"); 
-const inputEmail = document.querySelector("#email"); 
-const inputPassword = document.querySelector("#password"); 
+const changeLink = document.querySelector(".signup-link") // ссылка, которая меняет вид popup
+const socialBlock =  document.querySelector(".login-social"); // блок с кнопками соц. сетей
+const forgotLink =  document.querySelector(".login-forgot"); // ссылка - забыли пароль
+const loginTitle =  document.querySelector(".login-title"); // заголовок popup
+const signButton =  document.querySelector(".sign-button"); // кнопка войти - Sugn In или Sign Up
+const signText =  document.querySelector(".signup-text"); // текст о наличии аккаунта
+const inputEmail = document.querySelector("#email"); // поле для email
+const inputPassword = document.querySelector("#password"); // поле для password
 
 const loginPopup = {
     title: 'Log in to your account',
@@ -154,6 +153,7 @@ shadow.addEventListener("click", function(evt) {
     }
 });
 
+/* вывести alert с введенными данными */
 signButton.addEventListener("click", function(evt) {
     evt.preventDefault();
     alert(`E-mail: ${inputEmail.value} \nPassword: ${inputPassword.value}`)
